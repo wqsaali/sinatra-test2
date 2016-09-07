@@ -1,21 +1,18 @@
 #========================
 #CONFIG
 #========================
-set :application, "APP_NAME"
+set :application, "sinatratesting"
  
-set :scm, :git
-set :git_enable_submodules, 1
-set :repository, "GIT_URL"
-set :branch, "master"
-set :ssh_options, { :forward_agent => true }
+set :repository, "git@github.com:wqsaali/sinatra-test2.git"
+
  
 set :stage, :production
-set :user, "deploy"
-set :use_sudo, false
+
+
 set :runner, "deploy"
-set :deploy_to, "/data/apps/#{stage}/#{application}"
+set :deploy_to, "/var/rails/#{stage}/#{application}"
 set :app_server, :passenger
-set :domain, "DOMAIN_URL"
+set :domain, %w{root@23.253.215.138}
  
 #========================
 #ROLES
